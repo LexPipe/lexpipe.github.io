@@ -10,16 +10,16 @@ $SlateBlueGray: #515967;
 $LightPurple: #9B86F8;
 
 
-$body-color: white;
 $background-color: white;
 $text-color: $DeepSpaceBlack;
+$body-color: $text-color;
 $link-color: $MajesticPurple;
 $masthead-link-color: $MajesticPurple;
 
 $serif              : "Lora", Georgia, Times, serif;
 $sans-serif-narrow  : "Poppins", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 
-$global-font-family : $serif;
+$global-font-family : $sans-serif-narrow;
 $header-font-family : $sans-serif-narrow;
 
 $intro-transition  : none;
@@ -28,3 +28,4 @@ $global-transition : none;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "splash";

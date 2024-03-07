@@ -1,0 +1,16 @@
+// Splash page customizations.
+.layout--splash {
+
+  .page__title,
+  .page__meta,
+  .page__lead,
+  .btn {
+    color: $DeepSpaceBlack;
+    text-shadow: none;
+
+    strong {
+      color: $MajesticPurple;
+    }
+  }
+
+}

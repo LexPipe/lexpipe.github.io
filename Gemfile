@@ -12,8 +12,8 @@ source "https://rubygems.org"
 # gem "minima", "~> 2.5"
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
-# gem 'webrick', '~> 1.7'
-# gem 'csv'
+gem 'webrick', '~> 1.7'
+gem 'csv'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
