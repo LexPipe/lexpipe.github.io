@@ -1,5 +1,9 @@
 main:
   - title: "Home"
     url: /
+  - title: "About"
+    url: /about
+  - title: "News"
+    url: /news
   - title: "External Link"
     url: https://google.com
