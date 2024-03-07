@@ -3,15 +3,19 @@ title: "**AI Enabled** <br> Legal Data Automation"
 layout: splash
 header:
   overlay_color: "#fff"
-  overlay_filter: "0.0"
+  overlay_filter: "linear-gradient(90deg, rgba(255,255,255,0.8) 40%, rgba(255,255,255,0.0) 90%)"
   overlay_image: /assets/images/lexpipe-hero.png
   actions:
     - label: "Don't click this"
       url: "https://www.lexpipe.com"
   caption: "Effortlessly integrating legal data into your workflow. Image: LexPipe"
-excerpt: "LexPipe transforms the way law firms and businesses access and utilize legal data by seamlessly integrating diverse legal information sources into their existing platforms, powered by cutting-edge AI for unmatched data quality."
+excerpt: >-
+  LexPipe transforms the way law firms and companies use legal data
+  for business development and matter management.
 intro: 
-  - excerpt: 'Discover how LexPipe revolutionizes legal data handling with AI-powered normalization and seamless integration, enhancing decision-making and efficiency for law firms and legal departments.'
+  - excerpt: >-
+     Unlock enhanced decision-making in law firms and legal departments, backed with a 
+      legal data pipeline of diverse legal sources, powered by cutting-edge AI for unmatched data quality.     
 feature_row:
   - image_path: /assets/images/lexpipe-hero.png
     alt: "placeholder image 1"
