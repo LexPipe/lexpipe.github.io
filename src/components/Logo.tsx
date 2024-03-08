@@ -1,3 +1,6 @@
+import Logo300 from "@/images/LexPipe-Trans-Rect-300.png"
+
+/*
 export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg aria-hidden="true" viewBox="0 0 109 40" {...props}>
@@ -29,4 +32,11 @@ export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
       />
     </svg>
   )
+}
+*/
+
+export function Logo(props: React.ComponentPropsWithoutRef<'img'>) {
+    return (
+        <img src={Logo300.src} alt="LexPipe" {...props} />
+    )
 }

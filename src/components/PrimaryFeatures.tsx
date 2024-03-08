@@ -12,27 +12,30 @@ import screenshotPayroll from '@/images/screenshots/payroll.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
+// Pull good images from heroicons
+import { LightBulbIcon, ChartBarIcon, PresentationChartLineIcon } from '@heroicons/react/20/solid'
+
 const features = [
   {
-    title: 'Payroll',
+    title: 'Unlocked Insights',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "Break silos and tap rich metadata available in the public record.",
     image: screenshotPayroll,
   },
   {
-    title: 'Claim expenses',
+    title: 'Data Governance',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "No manual data entry, validated AI models, fewer errors and gaps\n",
     image: screenshotExpenses,
   },
   {
-    title: 'VAT handling',
+    title: 'Open Standards',
     description:
       "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
     image: screenshotVatReturns,
   },
   {
-    title: 'Reporting',
+    title: 'Digital Transformation',
     description:
       'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
     image: screenshotReporting,
@@ -63,7 +66,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-primary-600 pb-28 pt-20 sm:py-32"
     >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -76,9 +79,9 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            Value Proposition for Law Firms
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
+          <p className="mt-6 text-lg tracking-tight text-primary-100">
             Well everything you need if you aren’t that picky about minor
             details like tax compliance.
           </p>
@@ -107,8 +110,8 @@ export function PrimaryFeatures() {
                           className={clsx(
                             'font-display text-lg ui-not-focus-visible:outline-none',
                             selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white',
+                              ? 'text-primary-600 lg:text-white'
+                              : 'text-primary-100 hover:text-white lg:text-white',
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
@@ -120,7 +123,7 @@ export function PrimaryFeatures() {
                           'mt-2 hidden text-sm lg:block',
                           selectedIndex === featureIndex
                             ? 'text-white'
-                            : 'text-blue-100 group-hover:text-white',
+                            : 'text-primary-100 group-hover:text-white',
                         )}
                       >
                         {feature.description}
@@ -138,7 +141,7 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-primary-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Image
                         className="w-full"
                         src={feature.image}

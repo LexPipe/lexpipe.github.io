@@ -1,6 +1,7 @@
 import formsPlugin from '@tailwindcss/forms'
 import headlessuiPlugin from '@headlessui/tailwindcss'
 import { type Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -8,9 +9,9 @@ export default {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
-      base: ['1rem', { lineHeight: '1.75rem' }],
-      lg: ['1.125rem', { lineHeight: '2rem' }],
-      xl: ['1.25rem', { lineHeight: '2rem' }],
+      base: ['1.1rem', { lineHeight: '1.75rem' }],
+      lg: ['1.2rem', { lineHeight: '2rem' }],
+      xl: ['1.4rem', { lineHeight: '2rem' }],
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['2rem', { lineHeight: '2.5rem' }],
       '4xl': ['2.5rem', { lineHeight: '3.5rem' }],
@@ -25,11 +26,16 @@ export default {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: 'var(--font-inter)',
-        display: 'var(--font-lexend)',
+        sans: 'var(--font-sans)',
+        display: 'var(--font-display)',
       },
       maxWidth: {
         '2xl': '40rem',
+      },
+      colors: {
+        primary: colors.violet,
+        slate: colors.slate,
+        white: colors.white,
       },
     },
   },
