@@ -26,7 +26,8 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 
 ```bash
 npm run build
-mv out docs
+# Move the out directory to docs and create a .nojekyll file 
+rm -rf docs && mv out docs && touch docs/.nojekyll
 ```
 
 A new static site will be created in the `out` directory. Push to deploy.
