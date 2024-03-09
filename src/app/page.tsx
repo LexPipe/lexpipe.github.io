@@ -21,8 +21,8 @@ export default function Home() {
       <Header />
         <main>
             <HeroAngled/>
-            <FeatureImageManyToMany/>
             <FeatureImageHubSpoke/>
+            <FeatureImageManyToMany/>
             <ValueProposition/>
             <CallToAction/>
 

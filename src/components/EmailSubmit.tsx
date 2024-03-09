@@ -6,12 +6,14 @@ interface Props {
 }
 // Default script from our submissions spreasheet:
 var defaultGoogleAppsScriptURL = "https://script.google.com/macros/s/AKfycbzcwnZLKLZVq6RzVrjrgewqPMPgsNgSTL9dvzKcu5YrLPAvdjx1uvwVNu4cBOrBWGvY/exec"
-export const EmailSignupForm: React.FC<Props> = ({ googleAppsScriptURL }) => {
+export function EmailSignupForm() {
     const [email, setEmail] = useState('');
     const [statusMessage, setStatusMessage] = useState<string | null>(null);
+    const ctaText = 'Join Waitlist';
 
     const handleSubmit = async (event: React.FormEvent) => {
-        if(!googleAppsScriptURL) googleAppsScriptURL = defaultGoogleAppsScriptURL
+        // Can make this an input parameter if we need more than 1.
+        var googleAppsScriptURL = defaultGoogleAppsScriptURL;
         event.preventDefault();
         try {
             const response = await fetch(googleAppsScriptURL, {
@@ -42,9 +44,9 @@ export const EmailSignupForm: React.FC<Props> = ({ googleAppsScriptURL }) => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="p-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-full rounded-md shadow-sm"
-                    placeholder="your.email@example.com"
+                    placeholder="email@firm.com"
                 />
-                <Button variant={'solid'} color={'primary'} type="submit">Subscribe</Button>
+                <Button className="w-40" variant={'solid'} color={'primary'} type="submit">{ctaText}</Button>
             </div>
             {statusMessage && <p className="mt-2 text-sm">{statusMessage}</p>}
         </form>

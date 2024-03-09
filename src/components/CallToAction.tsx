@@ -6,30 +6,20 @@ import backgroundImage from '@/images/background-call-to-action.jpg'
 
 export function CallToAction() {
   return (
-    <section
-      id="get-started-today"
-      className="relative overflow-hidden bg-primary-600 py-32"
-    >
-      <Image
-        className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
-        src={backgroundImage}
-        alt=""
-        width={2347}
-        height={1244}
-        unoptimized
-      />
+    <div className="relative overflow-hidden bg-slate-100 py-32">
+
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            Interested in high quality legal data?
+          <h2 className="text-3xl tracking-tight text-gray-800 sm:text-4xl">
+            Ready?
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-white">
-            Get early access.
+          <p className="mt-4 text-lg tracking-tight text-gray-800">
+            Unlock new opportunities with high quality legal data.
           </p>
           <EmailSignupForm />
 
         </div>
       </Container>
-    </section>
+    </div>
   )
 }

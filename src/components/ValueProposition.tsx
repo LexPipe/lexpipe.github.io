@@ -2,31 +2,33 @@ import { ChatBubbleOvalLeftEllipsisIcon, HeartIcon, PencilSquareIcon, TrashIcon 
 import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUnlockKeyhole, faGavel, faBookOpen, faGlobe} from '@fortawesome/free-solid-svg-icons'
 
-import backgroundImage from "@/images/background-features.jpg";
+// import backgroundImage from "@/images/background-features.jpg";
+import backgroundImage from '@/images/background-call-to-action.jpg'
+
 import Image from "next/image";
 
 const features = [
     {
-        name: 'Unlocked Insights',
+        name: 'Unlock Insights',
         description:
             'Break silos and tap rich metadata buried in the public record.',
         icon: (<FontAwesomeIcon icon={faUnlockKeyhole} />),
     },
     {
-        name: 'Digital Transformation',
+        name: 'Increased Collaboration',
         description:
-            'Richer database quality, increases usage of law firm tools.',
+            'Richer internal database quality, find more in-firm connections.',
         icon: (<FontAwesomeIcon icon={faGlobe} />),
     },
     {
         name: 'Data Governance',
-        description: 'No data entry or coding; just high quality data where you want it.',
+        description: 'No data entry or coding, just high quality data where you want it.',
         icon: (<FontAwesomeIcon icon={faGavel} />),
     },
     {
         name: 'Built on Open Standards',
         description:
-            "We're a a strong supporter of open APIs and legal standards, e.g., SALI.",
+            "We're a strong supporter of open APIs and legal standards, e.g., SALI.",
         icon: (<FontAwesomeIcon icon={faBookOpen} />),
     },
 ]

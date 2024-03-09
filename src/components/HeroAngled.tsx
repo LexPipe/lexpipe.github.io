@@ -32,11 +32,10 @@ export function HeroAngled() {
                                 </h1>
                                 <p className="mt-6 text-lg leading-8 text-gray-600">
                                     LexPipe transforms the way law firms and corporates use legal
-                                    information to develop new business and manage existing matters.
+                                    information to develop new business and manage matters.
                                 </p>
 
                                 <div className="pt-10">
-                                    <div className="text-gray-800">Signup for updates</div>
                                     <EmailSignupForm />
                                 </div>
                             </div>
