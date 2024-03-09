@@ -18,6 +18,7 @@ export interface FeatureImageProps {
     title_tag?: string; // Assuming title_tag is optional
     description: string;
     image: string; // Assuming image is a path to the image
+    right: boolean,
 }
 
 const default_FeaturesList : Feature[] = [{
@@ -47,6 +48,7 @@ const feature_Today: FeatureImageProps = {
     title: 'Legal Data in Firms Today',
     title_tag: 'Many-to-Many',
     description: 'Default description',
+    right: false,
     image: diagramManyToMany.src,
     features: [{
         name: 'Numerous legal data sources and firm databases.',
@@ -69,13 +71,14 @@ const feature_HubSpoke: FeatureImageProps = {
     title_tag: 'Hub-Spoke',
     description: 'A Platform to Connect Legal Data',
     image: diagramHubSpoke.src,
+    right: true,
     features: [{
-        name: 'Sync Platform.',
-        description: 'multiple data sources  up-to-date and secure firm records',
+        name: 'Unified Sync Platform',
+        description: 'Connect to multiple litigation data sources, each with its own benefits, keep firm records up-to-date',
         icon: CloudArrowUpIcon,
     }, {
-        name: 'Discover and Enrich.',
-        description: 'case status, type, judge, parties, motions, …',
+        name: 'Discover and Enrich',
+        description: 'Key fields transferred from data source (e.g., type, judge, parties, motions), new fields added',
         icon: LockClosedIcon,
     }, {
         name: 'Observability Dashboard.',
@@ -92,12 +95,12 @@ export function FeatureImageHubSpoke() {
 }
 
 
-export function FeatureImageTemplate({ features = default_FeaturesList, title, title_tag, description, image }: FeatureImageProps) {
+export function FeatureImageTemplate({ features = default_FeaturesList, title, title_tag, description, image, right }: FeatureImageProps) {
     return (
         <div className="overflow-hidden bg-white py-5 sm:py-10">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    <div className="lg:ml-auto lg:pl-4 lg:pt-4">
+                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                    <div className="lg:mr-auto lg:pt-4">
                         <div className="lg:max-w-lg">
                             <h2 className="text-base font-semibold leading-7 text-indigo-600">{title_tag}</h2>
                             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</p>
@@ -115,11 +118,11 @@ export function FeatureImageTemplate({ features = default_FeaturesList, title, t
                             </dl>
                         </div>
                     </div>
-                    <div className="flex items-start justify-end lg:order-first">
+                    <div className={"flex items-start justify-end " + (right ? "lg:order-first" : "lg:order-2")}>
                         <img
                             src={image}
                             alt="Product screenshot"
-                            className="pt-10"
+                            className="lg:pt-20 lg:pb-0 h-[400px] md:mx-auto sm:mx-auto pb-20"
                         />
                     </div>
                 </div>

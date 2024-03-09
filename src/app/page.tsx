@@ -11,6 +11,7 @@ import { HeroAngled } from "@/components/HeroAngled";
 import {FeatureImageManyToMany, FeatureImageHubSpoke, FeatureImageProps} from "@/components/FeatureImageLeft";
 import diagramManyToMany from "@/images/diagram-many_to_many.png";
 import {CloudArrowUpIcon, LockClosedIcon, ServerIcon} from "@heroicons/react/20/solid";
+import ValueProposition from "@/components/ValueProposition";
 
 
 
@@ -18,18 +19,15 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <HeroAngled />
-          <FeatureImageManyToMany/>
-          <FeatureImageHubSpoke/>
-        <PrimaryFeatures />
-        <SecondaryFeatures />
-        <CallToAction />
-        <Testimonials />
-        <Pricing />
-        <Faqs />
-      </main>
-      <Footer />
+        <main>
+            <HeroAngled/>
+            <FeatureImageManyToMany/>
+            <FeatureImageHubSpoke/>
+            <ValueProposition/>
+            <CallToAction/>
+
+        </main>
+        <Footer/>
     </>
   )
 }
