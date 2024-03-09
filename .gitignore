@@ -12,7 +12,7 @@
 /.next/
 
 # Turn off the default ignore rules for the next.js build output
-# /out/
+/out/
 
 # production
 /build

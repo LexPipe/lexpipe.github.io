@@ -26,6 +26,7 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 
 ```bash
 npm run build
+mv out docs
 ```
 
 A new static site will be created in the `out` directory. Push to deploy.
