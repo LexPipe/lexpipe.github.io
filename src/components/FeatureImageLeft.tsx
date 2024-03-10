@@ -59,7 +59,7 @@ const feature_Today: FeatureImageProps = {
         icon: CloudArrowUpIcon,
     }, {
         name: 'Time-consuming data entry, complex setup.',
-        description: 'Few firms have the resources to manually copy/paste data or setup APIs from various vendor tools.',
+        description: 'Few firms have the resources to manually copy/paste data or setup complex APIs from multiple vendors.',
         icon: LockClosedIcon,
     }, {
         name: 'Empty databases; knowledge gaps; unused tech.',
@@ -100,7 +100,8 @@ export function FeatureImageHubSpoke() {
 export function FeatureImageTemplate({ features = default_FeaturesList, title, title_tag, description, image, right }: FeatureImageProps) {
     return (
             <div className="mx-auto max-w-7xl px-6 lg:px-8 overflow-hidden bg-white py-16 sm:py-10 mb-10">
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                <div
+                    className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="lg:mr-auto lg:pt-4">
                         <div className="lg:max-w-lg">
                             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</p>
@@ -110,21 +111,29 @@ export function FeatureImageTemplate({ features = default_FeaturesList, title, t
                                 {features.map((feature) => (
                                     <div key={feature.name} className="relative pl-14">
                                         <dt className="inline font-semibold text-gray-900">
-                                            <feature.icon className="absolute left-1 top-1 h-10 w-10 text-primary-600" aria-hidden="true" />
+                                            <feature.icon className="absolute left-1 top-1 h-10 w-10 text-primary-600"
+                                                          aria-hidden="true"/>
                                             {feature.name}
-                                        </dt>{' '}
+                                        </dt>
+                                        {' '}
                                         <dd className="inline">{feature.description}</dd>
                                     </div>
                                 ))}
                             </dl>
                         </div>
                     </div>
-                    <div className={"flex items-start justify-end " + (right ? "lg:order-first" : "lg:order-2")}>
-                        <img
-                            src={image}
-                            alt="Product screenshot"
-                            className="lg:pt-20 lg:pb-0 h-[400px] md:mx-auto sm:mx-auto pb-20"
-                        />
+                    <div className={"flex items-start justify-end " + (right ? "lg:order-first" : "lg:order-last")}>
+                        <div className="relative w-full lg:h-[400px] lg:pt-[100px] md:h-[250px] md:pt-0 sm:pt-0 h-[200px]"> {/* Padding is applied here */}
+                            <div className="relative h-full"> {/* New div that respects padding */}
+                                <Image
+                                    src={image}
+                                    alt={"Diagram of " + title}
+                                    layout="fill"
+                                    objectFit="contain" // or 'cover', depending on your need
+                                    className="object-center"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

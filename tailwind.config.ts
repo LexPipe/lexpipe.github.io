@@ -4,7 +4,10 @@ import { type Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './src/pages/posts/*.{js,jsx,ts,tsx}'
+  ],
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
