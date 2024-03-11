@@ -7,17 +7,27 @@ import ValueProposition from "@/components/ValueProposition";
 import Logo1000 from "@/images/LexPipe-White-Sq-1000-Pipes.png";
 import type {Metadata} from "next";
 
-function convertToRelative(url: string): string {
-    // Split the URL by "/"
-    const parts = url.split("/");
+// Hard-code the base URL for production environment
+const BASE_URL = 'https://lexpipe.com';
 
-    // Remove the scheme and domain parts. The first part is empty due to the split at "http://",
-    // and the next two parts are the domain. Therefore, we start from the fourth part (index 3).
-    const relativePath = parts.slice(3).join("/");
-
-    // Return the relative path
-    return "/" + relativePath;
+function generateAbsoluteUrl(path: string): string {
+    // Ensure the path does not start with a slash to avoid double slashes in the URL
+    const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+    return `${BASE_URL}/${normalizedPath}`;
 }
+
+function convertToRelative(url: string): string {
+    // Use a regex to remove the protocol and domain part of the URL
+    // This regex matches any string that starts with a scheme followed by "://",
+    // optionally followed by any characters (non-greedy) until the first slash after the domain
+    const regex = /^[a-zA-Z]+:\/\/[^\/]+/;
+
+    // Replace the matched scheme and domain with an empty string, effectively removing them
+    // Prepend "/" to ensure the result is a relative path, unless the URL is already relative
+    return url.replace(regex, '');
+}
+
+
 export const metadata: Metadata = {
     title: {
         template: 'LexPipe',
@@ -26,7 +36,7 @@ export const metadata: Metadata = {
     // Add the logo to the openGraph
     openGraph : {
         images: [{
-            url : convertToRelative(Logo1000.src),
+            url : generateAbsoluteUrl(convertToRelative(Logo1000.src)),
             width : Logo1000.width,
             height : Logo1000.height,
         }],
