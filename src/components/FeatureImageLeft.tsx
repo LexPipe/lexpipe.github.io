@@ -1,14 +1,15 @@
 import Image from 'next/image'
 
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import diagramManyToMany from "@/images/diagram-many_to_many.png";
 import diagramHubSpoke from "@/images/diagram-hub_spoke.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCloudUploadAlt, faLock, faDatabase, faSyncAlt, faSearch, faChartLine } from "@fortawesome/free-solid-svg-icons";
 
 // Define an interface for the feature object
 interface Feature {
     name: string;
     description: string;
-    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    icon: typeof faLock;
 }
 
 // Define an interface for the component props
@@ -25,15 +26,15 @@ const default_FeaturesList : Feature[] = [{
         name: 'Push to deploy.',
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: CloudArrowUpIcon,
+        icon: faCloudUploadAlt,
     }, {
         name: 'SSL certificates.',
         description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-        icon: LockClosedIcon,
+        icon: faLock,
     }, {
         name: 'Database backups.',
         description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: ServerIcon,
+        icon: faDatabase,
     }
 ]
 const default_FeatureImageProps: FeatureImageProps = {
@@ -56,15 +57,15 @@ const feature_Today: FeatureImageProps = {
         description:
             'Today law firms are inundated with data. Complex internal system and numerous external public ' +
             'data sources are managed by dedicated knowledge management teams.',
-        icon: CloudArrowUpIcon,
+        icon: faCloudUploadAlt,
     }, {
         name: 'Time-consuming data entry, complex setup.',
         description: 'Few firms have the resources to manually copy/paste data or setup complex APIs from multiple vendors.',
-        icon: LockClosedIcon,
+        icon: faLock,
     }, {
         name: 'Empty databases; knowledge gaps; unused tech.',
         description: 'Firms have invested in underlying tech, but without data, it is not being used to its full potential.',
-        icon: ServerIcon,
+        icon: faDatabase,
     }]
 }
 
@@ -77,15 +78,15 @@ const feature_HubSpoke: FeatureImageProps = {
     features: [{
         name: 'Unified Sync Platform',
         description: 'Connect to multiple data sources, keep firm records up-to-date.',
-        icon: CloudArrowUpIcon,
+        icon: faSyncAlt,
     }, {
         name: 'Discover and Enrich',
         description: 'Over 50 fields kept up-to-date including case status, type, judge, parties, motions, and more.',
-        icon: LockClosedIcon,
+        icon: faSearch,
     }, {
-        name: 'Observability Dashboard.',
-        description: 'Generative AI audit trail; data source feed coverage and latency validations.',
-        icon: ServerIcon,
+        name: 'Observability Dashboard',
+        description: 'Generative AI audit trail, data source coverage confirmations, and feed latency validation.',
+        icon: faChartLine,
     }]
 }
 
@@ -111,8 +112,8 @@ export function FeatureImageTemplate({ features = default_FeaturesList, title, t
                                 {features.map((feature) => (
                                     <div key={feature.name} className="relative pl-14">
                                         <dt className="inline font-semibold text-gray-900">
-                                            <feature.icon className="absolute left-1 top-1 h-10 w-10 text-primary-600"
-                                                          aria-hidden="true"/>
+                                            <FontAwesomeIcon icon={feature.icon} className="absolute left-1 top-1 h-10 w-10 text-primary-600" aria-hidden="true"/>
+
                                             {feature.name}
                                         </dt>
                                         {' '}
