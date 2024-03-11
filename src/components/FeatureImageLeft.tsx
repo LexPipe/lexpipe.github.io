@@ -55,7 +55,7 @@ const feature_Today: FeatureImageProps = {
     features: [{
         name: 'Numerous legal data sources and firm databases.',
         description:
-            'Today law firms are inundated with data. Complex internal system and numerous external public ' +
+            'Today law firms are inundated with data. Complex internal systems and numerous external public ' +
             'data sources are managed by dedicated knowledge management teams.',
         icon: faCloudUploadAlt,
     }, {
@@ -77,11 +77,11 @@ const feature_HubSpoke: FeatureImageProps = {
     right: true,
     features: [{
         name: 'Unified Sync Platform',
-        description: 'Connect to multiple data sources, keep firm records up-to-date.',
+        description: 'Direct connections to data sources to keep firm records up-to-date.',
         icon: faSyncAlt,
     }, {
         name: 'Discover and Enrich',
-        description: 'Over 50 fields kept up-to-date including case status, type, judge, parties, motions, and more.',
+        description: 'Dozens of fields kept up-to-date including case status, type, judge, parties, motions, and more.',
         icon: faSearch,
     }, {
         name: 'Observability Dashboard',
