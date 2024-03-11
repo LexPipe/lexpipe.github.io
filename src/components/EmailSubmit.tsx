@@ -1,41 +1,42 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
-import {Button} from '@/components/Button';
-interface Props {
-    googleAppsScriptURL: string;
-}
-// Default script from our submissions spreasheet:
-var defaultGoogleAppsScriptURL = "https://script.google.com/macros/s/AKfycbzcwnZLKLZVq6RzVrjrgewqPMPgsNgSTL9dvzKcu5YrLPAvdjx1uvwVNu4cBOrBWGvY/exec"
+import { Button } from '@/components/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
+var defaultGoogleAppsScriptURL = "https://script.google.com/macros/s/AKfycbzcwnZLKLZVq6RzVrjrgewqPMPgsNgSTL9dvzKcu5YrLPAvdjx1uvwVNu4cBOrBWGvY/exec";
+
 export function EmailSignupForm() {
     const [email, setEmail] = useState('');
-    const [statusMessage, setStatusMessage] = useState<string | null>(null);
-    const ctaText = 'Join Waitlist';
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false); // Track submission state
 
     const handleSubmit = async (event: React.FormEvent) => {
-        // Can make this an input parameter if we need more than 1.
-        var googleAppsScriptURL = defaultGoogleAppsScriptURL;
         event.preventDefault();
+        setIsLoading(true);
         try {
-            const response = await fetch(googleAppsScriptURL, {
+            const response = await fetch(defaultGoogleAppsScriptURL, {
                 method: 'POST',
-                mode : 'no-cors',
-                body: JSON.stringify({ email : email, message: 'New Subscriber - Website' }),
+                mode: 'no-cors',
+                body: JSON.stringify({ email: email, message: 'New Subscriber - Website' }),
                 headers: new Headers({ 'Content-Type': 'application/json' }),
             });
             if (response.ok || response.type == 'opaque') {
-                setStatusMessage('Thank you for your interest!');
-                setEmail(''); // Clear the input after successful submission
+                setIsSubmitted(true); // Indicate successful submission
+                setEmail(''); // Optionally clear input after success
             } else {
-                setStatusMessage('An error occurred. Please try again.');
+                // Optionally handle error state
             }
         } catch (error) {
             console.error('Error:', error);
-            setStatusMessage('An error occurred. Please try again.');
+            // Optionally handle error state
+        } finally {
+            setIsLoading(false);
         }
     };
 
     return (
-        <form onSubmit={handleSubmit} className="">
+        <form onSubmit={handleSubmit}>
             <div className="flex w-full">
                 <input
                     type="email"
@@ -45,11 +46,14 @@ export function EmailSignupForm() {
                     required
                     className="p-2 border border-gray-300 focus:ring-primary-500 focus:border-primary-500 block w-full rounded-full shadow-sm"
                     placeholder="email@company.com"
+                    disabled={isLoading} // Only disable input if loading
                 />
-                <Button className="ml-2 w-40" variant={'solid'} color={'primary'} type="submit">{ctaText}</Button>
+                <Button className={`ml-2 w-40 ${isSubmitted ? 'bg-slate-400 text-white' : 'text-white-500'}`} variant={'solid'}
+                        color={isSubmitted ? 'slate' : 'primary'}
+                        type="submit" disabled={isLoading || isSubmitted} style={{ pointerEvents: isSubmitted ? 'none' : 'auto' }}>
+                    {isLoading ? <FontAwesomeIcon icon={faSpinner} spin /> : isSubmitted ? 'Submitted!' : 'Join Waitlist'}
+                </Button>
             </div>
-            {statusMessage && <p className="mt-2 text-sm">{statusMessage}</p>}
         </form>
     );
 };
-
