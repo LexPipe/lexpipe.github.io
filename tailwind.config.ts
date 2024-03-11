@@ -24,6 +24,13 @@ export default {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
+    colors: {
+      primary: colors.violet,
+      slate: colors.slate,
+      white: colors.white,
+      gray : colors.gray,
+      indigo: colors.indigo,
+    },
     extend: {
       borderRadius: {
         '4xl': '2rem',
@@ -34,11 +41,6 @@ export default {
       },
       maxWidth: {
         '2xl': '40rem',
-      },
-      colors: {
-        primary: colors.violet,
-        slate: colors.slate,
-        white: colors.white,
       },
     },
   },
