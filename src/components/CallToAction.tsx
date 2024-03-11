@@ -11,9 +11,9 @@ export function CallToAction() {
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-3xl tracking-tight text-gray-800 sm:text-4xl">
-            Ready?
+            Ready to Learn More?
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-gray-800">
+          <p className="mt-4 text-lg tracking-tight text-gray-800 pb-2">
             Unlock new opportunities with high quality legal data.
           </p>
           <EmailSignupForm />

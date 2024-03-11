@@ -44,7 +44,7 @@ export function EmailSignupForm() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="p-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-full rounded-md shadow-sm"
-                    placeholder="email@firm.com"
+                    placeholder="email@company.com"
                 />
                 <Button className="w-40" variant={'solid'} color={'primary'} type="submit">{ctaText}</Button>
             </div>

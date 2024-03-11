@@ -35,8 +35,11 @@ export function HeroAngled() {
                                     information to develop new business and manage matters.
                                 </p>
 
-                                <div className="pt-10">
-                                    <EmailSignupForm />
+                                <div className="pt-4">
+                                    <p className="mt-4 text-sm tracking-tight text-gray-800 pb-2">
+                                        Signup for our waitlist for exclusive updates.
+                                    </p>
+                                    <EmailSignupForm/>
                                 </div>
                             </div>
                         </div>
