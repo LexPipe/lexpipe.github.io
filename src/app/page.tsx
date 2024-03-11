@@ -7,6 +7,17 @@ import ValueProposition from "@/components/ValueProposition";
 import Logo1000 from "@/images/LexPipe-White-Sq-1000-Pipes.png";
 import type {Metadata} from "next";
 
+function convertToRelative(url: string): string {
+    // Split the URL by "/"
+    const parts = url.split("/");
+
+    // Remove the scheme and domain parts. The first part is empty due to the split at "http://",
+    // and the next two parts are the domain. Therefore, we start from the fourth part (index 3).
+    const relativePath = parts.slice(3).join("/");
+
+    // Return the relative path
+    return "/" + relativePath;
+}
 export const metadata: Metadata = {
     title: {
         template: 'LexPipe',
@@ -15,7 +26,7 @@ export const metadata: Metadata = {
     // Add the logo to the openGraph
     openGraph : {
         images: [{
-            url : Logo1000.src,
+            url : convertToRelative(Logo1000.src),
             width : Logo1000.width,
             height : Logo1000.height,
         }],
