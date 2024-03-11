@@ -13,7 +13,7 @@ export function CallToAction() {
           <h2 className="text-3xl tracking-tight text-gray-800 sm:text-4xl">
             Ready to Learn More?
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-gray-800 pb-2">
+          <p className="mt-4 text-lg tracking-tight text-gray-800 pb-10 pt-4">
             Unlock new opportunities with high quality legal data.
           </p>
           <EmailSignupForm />

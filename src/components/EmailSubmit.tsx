@@ -43,10 +43,10 @@ export function EmailSignupForm() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="p-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-full rounded-md shadow-sm"
+                    className="p-2 border border-gray-300 focus:ring-primary-500 focus:border-primary-500 block w-full rounded-full shadow-sm"
                     placeholder="email@company.com"
                 />
-                <Button className="w-40" variant={'solid'} color={'primary'} type="submit">{ctaText}</Button>
+                <Button className="ml-2 w-40" variant={'solid'} color={'primary'} type="submit">{ctaText}</Button>
             </div>
             {statusMessage && <p className="mt-2 text-sm">{statusMessage}</p>}
         </form>
