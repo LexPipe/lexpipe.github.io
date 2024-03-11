@@ -46,6 +46,7 @@ export function HeroAngled() {
                     </div>
                 </div>
                 <div className="bg-gray-50 absolute inset-y-0 right-0">
+                    <div className="lg:hidden absolute inset-0 bg-white opacity-70 md:opacity-50"/>
                     <div className="lg:hidden absolute inset-0 bg-gradient-to-r from-gray-50"/>
                     <Image
                         className="aspect-auto h-full w-full object-cover"

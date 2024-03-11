@@ -48,7 +48,7 @@ export function EmailSignupForm() {
                     placeholder="email@company.com"
                     disabled={isLoading} // Only disable input if loading
                 />
-                <Button className={`ml-2 w-40 text-white`} variant={'solid'}
+                <Button className={`ml-2 sm:ml-0 xs:ml-0 w-40 text-white`} variant={'solid'}
                         color={isSubmitted ? 'disabled' : 'primary'}
                         type="submit" disabled={isLoading || isSubmitted} style={{ pointerEvents: isSubmitted ? 'none' : 'auto' }}>
                     {isLoading ? <FontAwesomeIcon icon={faSpinner} spin /> : isSubmitted ? 'Submitted!' : 'Join Waitlist'}
