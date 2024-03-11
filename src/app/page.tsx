@@ -31,7 +31,7 @@ function convertToRelative(url: string): string {
 export const metadata: Metadata = {
     title: {
         template: 'LexPipe',
-        default: 'LexPipe - Legal workflow automation for law firms',
+        default: 'LexPipe: Workflow automation for law firms.',
     },
     // Add the logo to the openGraph
     openGraph : {

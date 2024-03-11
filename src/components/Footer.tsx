@@ -3,21 +3,28 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+// Use FontAwesome LinkedIn icon.
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer className="bg-slate-50 py-10">
       <Container>
-        <div className="py-4">
+        <div className="mx-auto max-w-[800px] relative ">
           <Logo className="h-10 w-auto"/>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0 inline-block">
             &copy; {new Date().getFullYear()} LexPipe, Inc.
           </p>
 
 
-          <nav className="inline-block ml-10 mt-10 text-sm" aria-label="quick links">
-            <div className="my-1 flex justify-center gap-x-6">
+          <nav className="inline-block text-sm right-0 top-4 absolute" aria-label="quick links">
+            <div className="flex justify-center gap-x-4">
             <NavLink href="https://lexpipe.trustshare.com/home">TrustShare</NavLink>
+              <NavLink href="https://www.linkedin.com/company/lexpipe-legal-data-pipeline/">
+                <FontAwesomeIcon icon={faLinkedin} className="h-6 w-6" />
+              </NavLink>
+
               {/*}    <NavLink href="#features">Features</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink>
               <NavLink href="#pricing">Pricing</NavLink>*/}
