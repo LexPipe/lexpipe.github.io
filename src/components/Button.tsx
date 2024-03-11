@@ -15,6 +15,8 @@ const variantStyles = {
     primary: 'bg-primary-600 text-white hover:text-slate-100 hover:bg-primary-500 active:bg-primary-800 active:text-primary-100 focus-visible:outline-primary-600',
     white:
       'bg-white text-slate-900 hover:bg-primary-50 active:bg-primary-200 active:text-slate-600 focus-visible:outline-white',
+    disabled :
+      'bg-slate-400 text-slate-400 cursor-not-allowed hover:bg-slate-200 hover:text-slate-400 active:bg-slate-200 active:text-slate-400 focus-visible:outline-slate-200',
   },
   outline: {
     slate:
