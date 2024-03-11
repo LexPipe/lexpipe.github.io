@@ -27,7 +27,7 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 ```bash
 npm run build
 # Move the out directory to docs and create a .nojekyll file 
-rm -rf docs && mv out docs && touch docs/.nojekyll
+rm -rf docs && mv out docs && touch docs/.nojekyll && echo lexpipe.com > docs\CNAME
 ```
 
 A new static site will be created in the `out` directory. Push to deploy.
