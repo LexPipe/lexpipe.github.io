@@ -4,7 +4,7 @@ import { Header } from '@/components/Header'
 import { HeroAngled } from "@/components/HeroAngled";
 import {FeatureImageManyToMany, FeatureImageHubSpoke} from "@/components/FeatureImageLeft";
 import ValueProposition from "@/components/ValueProposition";
-import Logo1000 from "@/images/LexPipe-White-Sq-1000-Pipes.png";
+import Logo1000 from "@/images/LexPipe-White-Sq-630-Pipes.png";
 import type {Metadata} from "next";
 
 // Hard-code the base URL for production environment
