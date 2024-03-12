@@ -12,7 +12,7 @@ export function Footer() {
     <footer className="bg-slate-50 py-10">
       <Container>
         <div className="mx-auto max-w-[800px] relative ">
-          <Logo className="h-10 w-auto"/>
+          <Link href="/"><Logo className="h-10 w-auto"/></Link>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0 inline-block">
             &copy; {new Date().getFullYear()} LexPipe, Inc.
           </p>
@@ -20,7 +20,9 @@ export function Footer() {
 
           <nav className="inline-block text-sm right-0 top-4 absolute" aria-label="quick links">
             <div className="flex justify-center gap-x-4">
-            <NavLink href="https://lexpipe.trustshare.com/home">TrustShare</NavLink>
+
+              <NavLink href="/privacy">Privacy</NavLink>
+              <NavLink href="https://lexpipe.trustshare.com/home">TrustShare</NavLink>
               <NavLink href="https://www.linkedin.com/company/lexpipe-legal-data-pipeline/">
                 <FontAwesomeIcon icon={faLinkedin} className="h-6 w-6" />
               </NavLink>
