@@ -16,7 +16,7 @@ export function HeroAngled() {
                         <div className="relative px-6 py-16 sm:py-40 lg:px-8 lg:py-36 lg:pr-0">
                             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                                 <h1 className="text-4xl font-bold lg:whitespace-nowrap tracking-tight text-gray-900 sm:text-6xl">
-                                    <div className="relative lg:inline-block">AI&nbsp;enabled</div>{' '}
+                                    <div className="relative lg:inline-block">AI-enabled</div>{' '}
                                     <span className="relative lg:whitespace-nowrap text-primary-600">
                                         <svg
                                             aria-hidden="true"
