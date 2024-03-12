@@ -81,7 +81,7 @@ const feature_HubSpoke: FeatureImageProps = {
         icon: faSyncAlt,
     }, {
         name: 'Discover and Enrich',
-        description: 'Dozens of fields kept up-to-date including case status, type, judge, parties, motions, and more.',
+        description: 'Dozens of fields kept up-to-date including case status, case type, judge, parties, motions, and more.',
         icon: faSearch,
     }, {
         name: 'Observability Dashboard',

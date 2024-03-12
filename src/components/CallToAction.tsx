@@ -16,8 +16,11 @@ export function CallToAction() {
           <p className="mt-4 text-lg tracking-tight text-gray-800 pb-10 pt-4">
             Unlock new opportunities with high quality legal data.
           </p>
-          <EmailSignupForm />
-
+          <EmailSignupForm/>
+          <p className="mt-4 text-lg tracking-tight text-gray-800 pb-10 pt-4">
+            <span className="">Want to talk? Email us:</span><br/>
+            <a href="mailto:info@lexpipe.com" className="text-primary-700">info@lexpipe.com</a>
+          </p>
         </div>
       </Container>
     </div>

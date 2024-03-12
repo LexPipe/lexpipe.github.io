@@ -6,6 +6,7 @@ import {FeatureImageManyToMany, FeatureImageHubSpoke} from "@/components/Feature
 import ValueProposition from "@/components/ValueProposition";
 import Logo1000 from "@/images/LexPipe-White-Sq-630-Pipes.png";
 import type {Metadata} from "next";
+import Head from 'next/head';
 
 // Hard-code the base URL for production environment
 const BASE_URL = 'https://lexpipe.com';
