@@ -1,4 +1,5 @@
 import formsPlugin from '@tailwindcss/forms'
+import prosePlugin from '@tailwindcss/typography'
 import headlessuiPlugin from '@headlessui/tailwindcss'
 import { type Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
@@ -6,7 +7,8 @@ import colors from 'tailwindcss/colors'
 export default {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
-    './src/pages/posts/*.{js,jsx,ts,tsx}'
+    './src/pages/posts/*.{js,jsx,ts,tsx}',
+    './src/pages/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     fontSize: {
@@ -44,5 +46,5 @@ export default {
       },
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [formsPlugin, headlessuiPlugin, prosePlugin],
 } satisfies Config

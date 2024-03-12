@@ -1,3 +1,4 @@
+// /app/privacy.tsx
 import { CallToAction } from '@/components/CallToAction'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -6,7 +7,6 @@ import {FeatureImageManyToMany, FeatureImageHubSpoke} from "@/components/Feature
 import ValueProposition from "@/components/ValueProposition";
 import Logo1000 from "@/images/LexPipe-White-Sq-630-Pipes.png";
 import type {Metadata} from "next";
-import Head from 'next/head';
 
 // Hard-code the base URL for production environment
 const BASE_URL = 'https://lexpipe.com';
@@ -31,7 +31,7 @@ function convertToRelative(url: string): string {
 
 export const metadata: Metadata = {
     title: {
-        template: 'LexPipe',
+        template: '%s | LexPipe',
         default: 'LexPipe: Workflow automation for law firms.',
     },
     // Add the logo to the openGraph
