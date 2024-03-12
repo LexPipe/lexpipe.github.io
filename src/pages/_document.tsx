@@ -11,7 +11,11 @@ export default class LexPipeDocument extends Document {
                          inter.variable,
                          lexend.variable,
                      )}>
+            <Head>
+                {/* Tags like meta, link for CSS, etc. */}
+            </Head>
             <body>
+
             <Main />
             <NextScript />
             </body>
