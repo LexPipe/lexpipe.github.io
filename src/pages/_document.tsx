@@ -31,8 +31,8 @@ export default class LexPipeDocument extends Document {
                          lexend.variable,
                      )}>
 
-            <body>
             <LexPipeHeaderInfo/>
+            <body>
             <GoogleTagManager gtmId="GTM-PX3WB949"/>
             <Main/>
             <NextScript/>
