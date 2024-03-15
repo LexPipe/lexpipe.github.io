@@ -14,9 +14,11 @@ export function HeroAngled() {
                 <div className="mx-auto max-w-7xl">
                     <div className="relative z-10 lg:w-full lg:max-w-2xl">
                         <div className="relative px-6 py-16 sm:py-40 lg:px-8 lg:py-36 lg:pr-0">
-                            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+                            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl relative">
                                 <h1 className="text-4xl font-bold lg:whitespace-nowrap tracking-tight text-gray-900 sm:text-6xl">
-                                    <div className="relative lg:inline-block">AI-enabled</div>{' '}
+                                    <div className="relative lg:inline-block">AI-enabled
+
+                                    </div>{' '}
                                     <span className="relative lg:whitespace-nowrap text-primary-600">
                                         <svg
                                             aria-hidden="true"
@@ -31,13 +33,12 @@ export function HeroAngled() {
                                     </span>{' '}<span className="relative block pt-8 text-[1.6rem] text-gray-700 sm:text-gray-900 leading-8 drop-shadow-white drop-shadow-lg">for business development and matter management</span>
                                 </h1>
                                 <p className="mt-6 text-lg leading-8 text-gray-600 drop-shadow-white drop-shadow-lg sm:text-gray-900">
-                                    LexPipe transforms the way law firms and corporates use legal
+                                    LexPipe transforms the way law firms use legal
                                     data to develop new business and manage matters.
                                 </p>
-
                                 <div className="pt-4">
                                     <p className="mt-4 text-sm tracking-tight text-gray-800 pb-2">
-                                        Signup for our waitlist for exclusive updates.
+                                        Launching <span className="font-bold">soon</span>. Signup for our waitlist and exclusive updates.
                                     </p>
                                     <EmailSignupForm/>
                                 </div>

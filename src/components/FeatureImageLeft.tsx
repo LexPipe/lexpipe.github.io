@@ -77,11 +77,11 @@ const feature_HubSpoke: FeatureImageProps = {
     right: true,
     features: [{
         name: 'Unified Sync Platform',
-        description: 'Direct connections to data sources to keep firm records up-to-date.',
+        description: 'Connect public data sources to private databases, keep firm records up-to-date.',
         icon: faSyncAlt,
     }, {
         name: 'Discover and Enrich',
-        description: 'Dozens of fields kept up-to-date including case status, case type, judge, parties, motions, and more.',
+        description: 'Dozens of fields including case status, case type, judge, parties, motions, and more.',
         icon: faSearch,
     }, {
         name: 'Observability Dashboard',
