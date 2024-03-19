@@ -3,9 +3,9 @@ import {GetStaticProps, NextPage} from 'next';
 import ReactMarkdown from 'react-markdown';
 import {Footer} from "@/components/Footer";
 import {Header} from "@/components/Header";
-import Head from "next/head";
-import React from "react";
 import {Hero} from "@/components/Hero";
+import Head from "next/head";
+import React, { useEffect } from 'react';
 
 
 var scheduleJSON = [
@@ -52,7 +52,7 @@ var scheduleJSON = [
     {
         "Day": "March 21, 2024",
         "DoW": "Thursday",
-        "Time": "2:15 PM",
+        "Time": "2:30 PM",
         "Type": "Substantive",
         "Leading": "Michael",
         "What": `#### Intro: LexConf 2024 Goals
@@ -110,7 +110,7 @@ var scheduleJSON = [
         "Type": "Food",
         "Leading": "",
         "What": `
-Reservations at [O'Neils](https://maps.app.goo.gl/vMYTdyPKVF5Skjft8)
+Reservations at [O'Neils](https://maps.app.goo.gl/vMYTdyPKVF5Skjft8) (optional)
 
 Backup: [Gotham Burger Social Club](https://maps.app.goo.gl/ismzAv4aRSMvfDDYA)`
     },
@@ -227,7 +227,7 @@ Backup at [Frank](https://resy.com/i/aUp4bKBpM4A)
         "Time": "8:00 PM",
         "Type": "Entertainment",
         "Leading": "",
-        "What": "Village Underground / Comedy Cellar"
+        "What": "[Village Underground / Comedy Cellar](https://maps.app.goo.gl/DHuzttRAX4Mrx34F8)"
     },
     {
         "Day": "",
@@ -303,7 +303,7 @@ var dowColor = {
 
 var introMD  = `
 
-### Goals
+## Goals
 
 The goal of this conference is to develop our platform and ensure each team member has a clear understanding 
 of **what we are building** and **why it matters**. 
@@ -316,11 +316,11 @@ Our aim is:
 
 Together, these goals set the stage for success!
 
-### Attendees
+## Attendees
 Michael; Mikhail; Yin; Kevan; Amelia
 
 
-# Agenda
+## Agenda
 `;
 
 const ScheduleCards = () => {
@@ -370,6 +370,14 @@ function LexConfTableHeaderRow() {
 
 export default function LexConf2024() {
     var lastDay = "";
+
+    useEffect(() => {
+        const links = document.querySelectorAll('.prose a');
+        links.forEach(link => {
+            link.setAttribute('target', '_blank');
+        });
+    }, []); // Empty dependency array means this runs once on component mount
+
     return (
         <>
             <Head><title>LexCon2024</title></Head>
