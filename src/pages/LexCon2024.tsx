@@ -8,7 +8,7 @@ const YourComponent = () => {
     }, [router]);
 
     return (
-        <div className="max-w-4xl text-2xl text-center">Redirecting... by popular demand</div>
+        <div className="max-w-4xl text-2xl text-center">No 404 here... </div>
     );
 }
 

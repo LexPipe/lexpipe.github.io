@@ -20,7 +20,7 @@ var scheduleJSON = [
     {
         "Day": "March 21, 2024",
         "DoW": "Thursday",
-        "Time": "12:15 PM",
+        "Time": "12:00 PM",
         "Type": "Logistics",
         "Leading": "",
         "What": "Michael will meet Kevan [at his hotel](https://maps.app.goo.gl/yrfCqMDSBJ6iB1Ve8)."
@@ -28,7 +28,7 @@ var scheduleJSON = [
     {
         "Day": "March 21, 2024",
         "DoW": "Thursday",
-        "Time": "12:15 PM",
+        "Time": "12:30 PM",
         "Type": "Logistics",
         "Leading": "",
         "What": `All meet at: [St. Johns Terminal, 550 Washington St, New York, NY 10282](https://maps.app.goo.gl/JpUEtUaPwL7ogsRy5)`
@@ -36,7 +36,7 @@ var scheduleJSON = [
     {
         "Day": "March 21, 2024",
         "DoW": "Thursday",
-        "Time": "12:30 PM",
+        "Time": "1:00 PM",
         "Type": "Food",
         "Leading": "",
         "What": "Lunch at Google's newest building, compliments of my [generous wife Amelia](https://www.linkedin.com/in/amelia-sander/)."
@@ -312,7 +312,7 @@ Our aim is:
 
 - **Clarity of Vision:** Sharpen our focus, ensure we are aligned with mission. Clarity is crucial to accelerating product development with precision.
 - **Enhanced Teamwork:** Open dialogue and collaboration. Success requires collective effort.
-- **Strategic Agility:** Refine strategy, SWOT analyses to anticipate potential challenges, ensuring we remain resilient and proactive.
+- **Strategic Agility:** Refine strategy, SWOT analyses to anticipate potential challenges, remain proactive.
 
 Together, these goals set the stage for success!
 
